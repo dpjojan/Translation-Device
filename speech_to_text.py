@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
 
-# prerequisites: as described in https://alphacephei.com/vosk/install and also python module `sounddevice` (simply run command `pip install sounddevice`)
-# Example usage using Dutch (nl) recognition model: `python test_microphone.py -m nl`
-# For more help run: `python test_microphone.py -h`
 
 import argparse
 import queue
@@ -15,7 +11,6 @@ q = queue.Queue()
 
 
 def int_or_str(text):
-    """Helper function for argument parsing."""
     try:
         return int(text)
     except ValueError:
@@ -23,7 +18,7 @@ def int_or_str(text):
 
 
 def callback(indata, frames, time, status):
-    """This is called (from a separate thread) for each audio block."""
+
     if status:
         print(status, file=sys.stderr)
     q.put(bytes(indata))
@@ -52,7 +47,7 @@ try:
         args.samplerate = int(device_info["default_samplerate"])
 
     if args.model is None:
-        model = Model(lang="en-us")
+        model = Model(lang="es")
     else:
         model = Model(lang=args.model)
 
