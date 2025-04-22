@@ -1,1 +1,3 @@
 The code in final_code.py is the full implementation of my team's translation device, capable of live translation between English, French, and Spanish. Built on a Raspberry Pi 5, the device uses Vosk for offline speech recognition, Azure for translation and text-to-speech, and outputs translated speech through a Bluetooth earpiece or displays it as text depending on the selected mode. Three GPIO buttons control the system: one for power/activation, one to cycle through languages, and one to toggle between speech and visual translation modes. In visual mode, the device uses a camera and Tesseract OCR to capture and translate printed text in real time.
+
+<img width="602" alt="Image" src="https://github.com/user-attachments/assets/32d2c317-efb1-4389-acf0-edb9e20920d1" />
